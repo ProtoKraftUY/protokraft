@@ -54,6 +54,27 @@
       max-width: 200px;
       height: auto;
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #0072ce;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #005ea3;
+    }
   </style>
 </head>
 <body>
@@ -91,9 +112,22 @@
     <h2>¿Tenés un diseño en mente?</h2>
     <p>Subí tu archivo, elegí el material y nosotros hacemos el resto. Si todavía no tenés el diseño, también podemos ayudarte a crearlo.</p>
     <div class="cta">
-      <a href="#">Solicitá tu presupuesto</a>
-      <a href="#">Contactanos</a>
+      <a href="#contacto">Solicitá tu presupuesto</a>
+      <a href="#contacto">Contactanos</a>
     </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés hacer una consulta o solicitar un presupuesto personalizado? Escribinos y te responderemos a la brevedad.</p>
+    <form action="https://formsubmit.co/protokraftuy@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://protokraftuy.github.io/protokraft/agradecimiento.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+      <input type="submit" value="Enviar mensaje">
+    </form>
   </section>
 
   <script>
